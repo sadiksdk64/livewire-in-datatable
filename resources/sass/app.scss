@@ -1,0 +1,60 @@
+@import "variables";
+@import "bootstrap-custom";
+@import "general";
+@import "menu";
+@import "waves";
+@import "helper";
+@import "badge";
+@import "pagination";
+@import "alerts";
+@import "buttons";
+@import "cards";
+@import "form-elements";
+@import "widgets";
+@import "tables";
+@import "calendar";
+@import "email";
+@import "timeline";
+@import "pricing";
+@import "pages";
+@import "custom-table";
+@import "switch";
+.accordion .card-header:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f106";
+    float: right;
+    top: 21px;
+    position: absolute;
+    right: 15px;
+    font-size: 16px;
+}
+
+.accordion .card-header.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\f107";
+}
+
+.accordion .header:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f106";
+    float: right;
+    top: 21px;
+    position: absolute;
+    right: 15px;
+    font-size: 16px;
+}
+
+.accordion .header.collapsed:after {
+    content: "\f107";
+}
+
+.appraisal-accordition {
+    > .card {
+        background: #f0f4f7;
+    }
+    .card-header {
+        background: #f0f4f7;
+    }
+}

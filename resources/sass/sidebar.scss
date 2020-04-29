@@ -1,0 +1,44 @@
+.sidenav
+{
+    position: absolute;
+    top:70px;
+    width:260px;
+    bottom:0;
+    overflow: auto;
+    left:0;
+    padding-bottom: 80px;
+    box-shadow:0 2px 5px 0 #e2e2e9;
+    .menu-search{
+        border-bottom: 1px solid #ddd !important;
+        border:none;
+    }
+  .has-child{
+    //   background: #384246 !important;
+    .nav-link{
+        color: #333;
+    &.active{
+         margin-left: -1rem;
+        padding-left: 1.7rem !important;
+    }
+}
+  }
+    .nav-link{
+        color: #333;
+        &.active{
+            border-left: 3px solid #9b251f ;
+                background: #e9ecef ;
+                color: #333;
+               
+        }
+    }
+
+}
+.nav-link[data-toggle].collapsed:after {
+    content: "▾";
+    float:right;
+}
+.nav-link[data-toggle]:not(.collapsed):after {
+    content: "▴";
+    float:right;
+}
+
