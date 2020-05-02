@@ -31,7 +31,7 @@
                                 <th>Name</th>
                                 <th>Mobile</th>
                                 <th>Country</th>
-                                <th>Pan</th>
+                                <th>PAN</th>
                                 <th>Email</th>
                                 <th>Action</th>
                             </tr>
@@ -47,8 +47,19 @@
         </div>
         <script>
             $(document).ready( function () {
-                $('#table_id').DataTable();
+                var t = $('#table_id').DataTable( {
+                    fixedHeader: {
+                        header: true
+                    },
+                    bInfo: false,
+                });
+                t.on( 'order.dt search.dt', function () {
+                    t.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+                        cell.innerHTML = i+1;
+                    } );
+                } ).draw();
             } );
         </script>
 </body>
+
 </html>
